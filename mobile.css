@@ -17,6 +17,7 @@ img {
   background: url(color3.jpg);
   animation: animateMidE 15s linear infinite;
   -webkit-background-clip: text;
+  background-clip: text;
   font-family: helvetica;
   font-size: 10vw;
   font-weight: 600;
@@ -136,5 +137,5 @@ span p{
   font-weight: bold;
   margin-top: 5px;
   padding-left: 70px;
-  color: #b9424e;
+  color: black;
 }
