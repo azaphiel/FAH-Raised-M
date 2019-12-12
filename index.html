@@ -36,8 +36,15 @@ body: JSON.stringify({
 
 function payCustom()
 {
+  if(document.getElementById("donation").value <10)
+  {
+    
+    
+  }
 let amountBtn = (+document.getElementById("donation").value * 100)-29;
 let transactionLink= null;
+
+
 
 fetch('https://api.raisedforyou.com/api/v1/sessions/93D49A/donations',{
 method: 'POST',
@@ -53,9 +60,17 @@ body: JSON.stringify({
 })
 
 .then( data => {transactionLink = data.transaction_link; console.log(data);
-   window.location = transactionLink; })
-
+if(document.getElementById("donation").value <10){
+  alert("Please enter minimum €10!");
+  
 }
+else{
+  window.location = transactionLink; 
+}
+   
+
+  })}
+
 function pay15()
 {
 
@@ -100,9 +115,11 @@ body: JSON.stringify({
   <div class="btn-all">
     <button class="btn-group" onclick="pay8()">€10</button>
     <button class="btn-group" onclick="pay15()">€20</button>
-    <button class="btn-group1" onclick="payCustom()">Pay</button>
-    <input type="number" id="donation" background-color="goldenrod"
+    
+    <button class="btn-group1"  onclick="payCustom()">Pay</button>
+    <input type="number" id="donation" min="10" max="1000" background-color="goldenrod"
     name="quantity" placeholder="Custom €">
+  
     <span><p>Min Amount: €10</p></span>
   </div>
 

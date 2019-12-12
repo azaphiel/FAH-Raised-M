@@ -133,6 +133,8 @@ img {
 
 span p{
   font-family: arial;
+  font-weight: bold;
   margin-top: 5px;
   padding-left: 70px;
+  color: #b9424e;
 }
