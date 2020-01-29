@@ -110,12 +110,12 @@ body {
   opacity: 1;
 }
 .btn-group:hover {
-  color: goldenrod;
-  background-color: #23575b;
+  color: white;
+  background-color: #F2709C;
 }
 .btn-group1:hover {
-  color: goldenrod;
-  background-color: #23575b;
+  color: white;
+  background-color: #F2709C;
 }
 
 #heart{
