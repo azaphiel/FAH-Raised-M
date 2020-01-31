@@ -22,7 +22,7 @@ headers: {
 'Content-Type': 'application/json'
 },
 body: JSON.stringify({
-  amount: 971,
+  amount: 571,
     currency: "EUR",
     description: "donation"
 })
@@ -60,8 +60,8 @@ body: JSON.stringify({
 })
 
 .then( data => {transactionLink = data.transaction_link; console.log(data);
-if(document.getElementById("donation").value <10){
-  alert("Please enter minimum €10!");
+if(document.getElementById("donation").value <6){
+  alert("Please enter minimum €6!");
   
 }
 else{
@@ -84,7 +84,7 @@ headers: {
 'Content-Type': 'application/json'
 },
 body: JSON.stringify({
-  amount: 1971,
+  amount: 971,
     currency: "EUR",
     description: "donation"
 })
@@ -127,14 +127,14 @@ body: JSON.stringify({
 
 
   <div class="btn-all">
-    <button class="btn-group" onclick="pay8()">€10</button>
-    <button class="btn-group" onclick="pay15()">€20</button>
+    <button class="btn-group" onclick="pay8()">€6</button>
+    <button class="btn-group" onclick="pay15()">€10</button>
     
     <button class="btn-group1"  onclick="payCustom()">Pay</button>
-    <input type="number" id="donation" min="10" max="1000" background-color="goldenrod"
+    <input type="number" id="donation" min="6" max="1000" background-color="goldenrod"
     name="quantity" placeholder="Custom €">
   
-    <span><p>Min Amount: €10</p></span>
+    <span><p>Min Amount: €6</p></span>
   </div>
 
 
